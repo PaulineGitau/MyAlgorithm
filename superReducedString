@@ -22,6 +22,8 @@ static String superReducedString(String s) {
     
     
     /* SAMPLE RUN
+            Input = "aaabccddd"
+            Output = "abcd"
             aaabccddd  
             a == a
             aabccddd
@@ -41,5 +43,6 @@ static String superReducedString(String s) {
             c != d
             d == d
             abcd
+            
 
             */
