@@ -1,0 +1,45 @@
+public class Solution {
+
+static String superReducedString(String s) {
+        int len = s.length();
+        int n = 0;
+        while (n < len - 1){
+             if (s.charAt(n) == s.charAt(n + 1)){
+                 s = s.substring(0,n) + s.substring(n+2);
+                 len = s.length();
+                 n = 0;
+                  continue; 
+             }
+              n++;
+        }
+        if (s.length() == 0){
+            return "Empty String";
+        }
+        return s;      
+        }  
+    }
+    
+    
+    
+    /* SAMPLE RUN
+            aaabccddd  
+            a == a
+            aabccddd
+            a==a
+            abccddd
+            a != b 
+            b != c
+            c == c
+            abcddd
+            a != b 
+            b != c
+            c != d
+            d == d
+            abcdd
+            a != b 
+            b != c
+            c != d
+            d == d
+            abcd
+
+            */
